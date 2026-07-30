@@ -153,27 +153,7 @@ nav a:hover{
 
 }
 </style>
-<section class="add-photo">
 
-<h2>Add a New Memory ✧</h2>
-
-<input
-    type="file"
-    id="photo-input"
-    accept="image/*"
->
-
-<input
-    type="text"
-    id="photo-caption"
-    placeholder="Write a caption..."
->
-
-<button onclick="addPhoto()">
-    Add to Gallery
-</button>
-
-</section>
 .gallery-grid{
 
     display:grid;
@@ -437,6 +417,26 @@ translateY(-3px);
 </head>
 
 <body>
+
+    <section class="add-photo">
+  <h2>Add a New Memory ✧</h2>
+
+  <input
+    type="file"
+    id="photo-input"
+    accept="image/*"
+  >
+
+  <input
+    type="text"
+    id="photo-caption"
+    placeholder="Write a caption..."
+  >
+
+  <button onclick="addPhoto()">
+    Add to Gallery
+  </button>
+</section>
 
 <nav>
 
