@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -10,54 +12,55 @@
 
 <style>
 
+/* GENERAL */
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
     font-family:'Poppins',sans-serif;
     color:#5b2c3d;
-}
-
-/* MAIN PAGE */
-
-.home{
-    height:100vh;
-    background:
-    linear-gradient(
-    rgba(255,220,230,.55),
-    rgba(255,240,245,.65)
-    ),
-    url("background.jpg.jpg");
-
-    background-size:cover;
-    background-position:center;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    position:relative;
-    overflow:hidden;
+    background:#fff0f5;
 }
 
 
-/* TOP NAV */
+/* NAVIGATION */
 
 nav{
-    position:absolute;
-    top:30px;
+    position:sticky;
+    top:0;
+    z-index:100;
+
     width:100%;
+
+    padding:22px;
+
     text-align:center;
+
+    background:rgba(255,248,245,.96);
+
+    box-shadow:
+    0 5px 20px
+    rgba(100,50,60,.12);
 }
 
 nav a{
     text-decoration:none;
+
     color:#6b3c4e;
-    margin:0 18px;
+
+    margin:0 15px;
+
     font-size:14px;
+
+    transition:.3s;
 }
 
 nav a:hover{
@@ -65,134 +68,727 @@ nav a:hover{
 }
 
 
-/* DIARY CARD */
+/* HOME */
+
+.home{
+    min-height:100vh;
+
+    background:
+
+    linear-gradient(
+    rgba(255,220,230,.55),
+    rgba(255,240,245,.65)
+    ),
+
+    url("background.jpg.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+
+/* HOME CARD */
 
 .diary{
     background:
-linear-gradient(
-rgba(255,248,245,.35),
-rgba(255,248,245,.45)
-),
-url("diary-picture.jpg");
 
-background-size:cover;
-background-position:center;
+    linear-gradient(
+    rgba(255,248,245,.35),
+    rgba(255,248,245,.45)
+    ),
+
+    url("diary-picture.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
     padding:70px 90px;
+
     border-radius:40px;
 
-    border:3px solid rgba(255,255,255,.8);
+    border:
+    3px solid
+    rgba(255,255,255,.8);
 
     box-shadow:
-    0 20px 50px rgba(100,50,60,.2);
+    0 20px 50px
+    rgba(100,50,60,.2);
 
     text-align:center;
 
-    backdrop-filter:blur(8px);
+    backdrop-filter:
+    blur(8px);
 
-    animation:appear 2s ease;
+    animation:
+    appear 2s ease;
 }
 
+.profile-picture{
+    width:130px;
 
-h1{
-    font-family:'Parisienne',cursive;
+    height:130px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    margin-bottom:20px;
+
+    border:
+    4px solid
+    rgba(255,255,255,.8);
+}
+
+.home h1{
+    font-family:
+    'Parisienne',cursive;
+
     font-size:5rem;
+
     color:#380618;
 }
 
+.home h2{
+    font-family:
+    'Cormorant Garamond',
+    serif;
 
-h2{
-    font-family:'Cormorant Garamond',serif;
     font-size:2rem;
+
     font-style:italic;
+
     margin-bottom:20px;
 }
 
-
-p{
+.home p{
     font-size:16px;
+
     color:#380215;
 }
 
 
-/* BUTTON */
+/* BUTTONS */
 
-button{
-    margin-top:35px;
+button,
+.home-button{
+
+    display:inline-block;
+
+    margin-top:30px;
 
     padding:15px 35px;
 
     border:none;
+
     border-radius:40px;
 
     background:#460719;
+
     color:white;
 
+    font-family:
+    'Poppins',sans-serif;
+
     font-size:15px;
+
+    text-decoration:none;
 
     cursor:pointer;
 
     transition:.4s;
 }
 
+button:hover,
+.home-button:hover{
 
-button:hover{
-    background:#44061a;
-    transform:translateY(-5px);
+    background:#6b1630;
+
+    transform:
+    translateY(-5px);
 }
 
 
 /* SPARKLES */
 
 .sparkle{
-    position:absolute;
-    color:white;
-    font-size:25px;
-    animation:float 8s infinite;
-}
 
+    position:absolute;
+
+    color:white;
+
+    font-size:25px;
+
+    animation:
+    float 8s infinite;
+}
 
 @keyframes float{
 
 0%{
-transform:translateY(100vh);
+
+transform:
+translateY(100vh);
+
 opacity:0;
+
 }
 
 50%{
+
 opacity:1;
+
 }
 
 100%{
-transform:translateY(-100vh);
+
+transform:
+translateY(-100vh);
+
 opacity:0;
-}
 
 }
 
+}
 
 @keyframes appear{
 
 from{
+
 opacity:0;
-transform:translateY(40px);
+
+transform:
+translateY(40px);
+
 }
 
 to{
+
 opacity:1;
-transform:translateY(0);
-}
+
+transform:
+translateY(0);
 
 }
 
+}
+
+
+/* DIARY */
+
+#diary{
+
+    background:#3f0d1e;
+
+    padding-bottom:50px;
+}
+
+.diary-title{
+
+    text-align:center;
+
+    padding:90px 20px;
+
+    background:
+
+    linear-gradient(
+
+    rgba(117,10,39,.65),
+
+    rgba(182,19,71,.75)
+
+    ),
+
+    url("background.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+}
+
+.diary-title h1{
+
+    font-family:
+    'Parisienne',cursive;
+
+    font-size:5rem;
+
+    color:#ffffff;
+
+    text-shadow:
+    0 4px 15px
+    rgba(90,40,60,.4);
+}
+
+.diary-title p{
+
+    font-family:
+    'Cormorant Garamond',
+    serif;
+
+    font-size:1.5rem;
+
+    font-style:italic;
+
+    color:white;
+}
+
+.diary-container{
+
+    width:85%;
+
+    max-width:850px;
+
+    margin:auto;
+
+    padding:60px 0;
+}
+
+.entry{
+
+    background:
+    rgb(44,7,7);
+
+    padding:40px;
+
+    margin-bottom:35px;
+
+    border-radius:25px;
+
+    border-left:
+    7px solid #b96d86;
+
+    box-shadow:
+
+    0 12px 35px
+
+    rgba(0,0,0,.2);
+
+    transition:.4s;
+}
+
+.entry:hover{
+
+    transform:
+    translateY(-6px);
+}
+
+.date{
+
+    color:#d88ca1;
+
+    font-size:13px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+}
+
+.entry h2{
+
+    font-family:
+    'Cormorant Garamond',
+    serif;
+
+    font-size:2.2rem;
+
+    font-style:italic;
+
+    color:#f0b6c6;
+
+    margin:12px 0;
+}
+
+.entry p{
+
+    color:#f4dce3;
+
+    line-height:1.9;
+}
+
+
+/* GALLERY */
+
+#gallery{
+
+    background:#fff0f5;
+}
+
+.gallery-heading{
+
+    text-align:center;
+
+    padding:90px 20px;
+
+    background:
+
+    linear-gradient(
+
+    rgba(255,220,230,.65),
+
+    rgba(255,240,245,.75)
+
+    ),
+
+    url("background.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+}
+
+.gallery-heading h1{
+
+    font-family:
+    'Parisienne',cursive;
+
+    font-size:5rem;
+
+    color:white;
+
+    text-shadow:
+
+    0 4px 15px
+
+    rgba(90,40,60,.4);
+}
+
+.gallery-heading p{
+
+    font-family:
+    'Cormorant Garamond',
+    serif;
+
+    font-size:1.6rem;
+
+    font-style:italic;
+
+    color:white;
+}
+
+.gallery-container{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:70px 0;
+}
+
+
+/* ADD PHOTO */
+
+.add-photo{
+
+    background:white;
+
+    padding:40px;
+
+    margin-bottom:45px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    box-shadow:
+
+    0 12px 35px
+
+    rgba(120,60,80,.15);
+}
+
+.add-photo h2{
+
+    font-family:
+    'Cormorant Garamond',
+    serif;
+
+    font-size:2.4rem;
+
+    font-style:italic;
+
+    color:#8c4961;
+
+    margin-bottom:20px;
+}
+
+.add-photo input{
+
+    width:100%;
+
+    padding:14px;
+
+    margin:10px 0;
+
+    border:
+    2px solid #f0c7d2;
+
+    border-radius:15px;
+
+    font-family:
+    'Poppins',sans-serif;
+}
+
+.add-photo button{
+
+    margin-top:15px;
+
+    background:#d88ca1;
+}
+
+.add-photo button:hover{
+
+    background:#b96d86;
+}
+
+
+/* PHOTO GRID */
+
+.gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(
+    auto-fit,
+    minmax(250px,1fr)
+    );
+
+    gap:25px;
+}
+
+.photo{
+
+    background:white;
+
+    padding:12px;
+
+    border-radius:25px;
+
+    box-shadow:
+
+    0 12px 35px
+
+    rgba(120,60,80,.15);
+
+    overflow:hidden;
+
+    transition:.4s;
+}
+
+.photo:hover{
+
+    transform:
+
+    translateY(-8px)
+
+    rotate(1deg);
+}
+
+.photo img{
+
+    width:100%;
+
+    height:300px;
+
+    object-fit:cover;
+
+    border-radius:18px;
+
+    display:block;
+}
+
+.photo p{
+
+    text-align:center;
+
+    padding:15px 8px 5px;
+
+    color:#8c4961;
+
+    font-family:
+
+    'Cormorant Garamond',
+
+    serif;
+
+    font-size:1.4rem;
+
+    font-style:italic;
+}
+
+.delete-photo{
+
+    display:block;
+
+    margin:
+    12px auto 5px;
+
+    padding:9px 20px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#b96d86;
+
+    color:white;
+
+    font-family:
+    'Poppins',sans-serif;
+
+    font-size:13px;
+
+    cursor:pointer;
+}
+
+.delete-photo:hover{
+
+    background:#8c4961;
+}
+
+
+/* SONGS */
+
+#songs{
+
+    background:#f7e8ee;
+
+    padding:90px 20px;
+}
+
+.songs-heading{
+
+    text-align:center;
+
+    margin-bottom:40px;
+}
+
+.songs-heading h1{
+
+    font-family:
+    'Parisienne',cursive;
+
+    font-size:5rem;
+
+    color:#5b2c3d;
+}
+
+.songs-heading p{
+
+    font-family:
+    'Cormorant Garamond',
+    serif;
+
+    font-size:1.5rem;
+
+    font-style:italic;
+}
+
+.songs-container{
+
+    width:100%;
+
+    max-width:700px;
+
+    margin:auto;
+}
+
+.song{
+
+    margin-bottom:25px;
+}
+
+.song iframe{
+
+    display:block;
+
+    width:100%;
+
+    border:0;
+}
+
+
+/* FOOTER */
+
+footer{
+
+    text-align:center;
+
+    padding:40px;
+
+    background:#331306;
+
+    color:#f4dce3;
+}
+
+
+/* MOBILE */
 
 @media(max-width:700px){
 
-.diary{
-padding:40px;
+nav{
+
+padding:18px 5px;
+
 }
 
-h1{
-font-size:3.5rem;
+nav a{
+
+margin:0 5px;
+
+font-size:12px;
+
+}
+
+.diary{
+
+padding:45px 25px;
+
+margin:20px;
+
+}
+
+.home h1{
+
+font-size:3.8rem;
+
+}
+
+.diary-title h1,
+
+.gallery-heading h1,
+
+.songs-heading h1{
+
+font-size:3.8rem;
+
+}
+
+.entry{
+
+padding:25px;
+
+}
+
+.photo img{
+
+height:260px;
+
 }
 
 }
@@ -205,47 +801,889 @@ font-size:3.5rem;
 <body>
 
 
-<section class="home">
-
+<!-- NAVIGATION -->
 
 <nav>
-<a href="#">Home</a>
-<a href="#">Diary</a>
-<a href="gallery.html">Gallery</a> 
-<a href="#">About</a>
-<a href="#">Contact</a>
+
+<a href="#home">Home</a>
+
+<a href="#diary">Diary</a>
+
+<a href="#gallery">Gallery</a>
+
+<a href="#songs">Songs 🎵</a>
+
 </nav>
 
 
+<!-- HOME -->
+
+<section
+id="home"
+class="home">
 
 <div class="diary">
-    <img src="profile.jpg" alt="hrsofrahma" class="profile-picture">
+
+<img
+src="profile.jpg"
+alt="hrsofrahma"
+class="profile-picture">
+
 <h1>hrsofrahma</h1>
 
 <h2>Cornelius Diaries</h2>
 
 <p>
+
 where the queen writes
+
 <br>
+
 beautiful sightings ✧
+
 </p>
 
-<a href="diary.html">
-<button>Open My Diary</button>
+<a href="#diary">
+
+<button>
+
+Open My Diary
+
+</button>
+
 </a>
 
 </div>
 
 
+<div
+class="sparkle"
+style="left:15%;animation-delay:1s;">
 
-<div class="sparkle" style="left:15%;animation-delay:1s;">✦</div>
-<div class="sparkle" style="left:35%;animation-delay:3s;">✧</div>
-<div class="sparkle" style="left:60%;animation-delay:5s;">✦</div>
-<div class="sparkle" style="left:80%;animation-delay:2s;">✧</div>
+✦
 
+</div>
+
+
+<div
+class="sparkle"
+style="left:35%;animation-delay:3s;">
+
+✧
+
+</div>
+
+
+<div
+class="sparkle"
+style="left:60%;animation-delay:5s;">
+
+✦
+
+</div>
+
+
+<div
+class="sparkle"
+style="left:80%;animation-delay:2s;">
+
+✧
+
+</div>
 
 </section>
 
 
+<!-- DIARY -->
+
+<section id="diary">
+
+<section class="diary-title">
+
+<h1>My Diary</h1>
+
+<p>
+
+A collection of thoughts,
+
+memories and beautiful moments ✧
+
+</p>
+
+</section>
+
+
+<main class="diary-container">
+
+
+<article class="entry">
+
+<div class="date">
+
+July 29, 2026
+
+</div>
+
+<h2>
+
+A Beautiful Beginning
+
+<br>
+
+(lessons on why I am THE QUEEN)
+
+</h2>
+
+<p>
+
+any day you wake up and realize
+i consider you my pawn,
+
+you should die of happiness
+(no joking intent)
+
+</p>
+
+</article>
+
+
+<article class="entry">
+
+<div class="date">
+
+July 20, 2026
+
+</div>
+
+<h2>
+
+Little Things That Made Me Smile
+
+<br>
+
+(My ravaging and astonishing self)
+
+</h2>
+
+<p>
+
+Sometimes i look at myself
+in the mirror and im so happy,
+
+like chimo look at this
+ravaging beauty
+
+</p>
+
+</article>
+
+
+<article class="entry">
+
+<div class="date">
+
+July 30, 2026
+
+</div>
+
+<h2>
+
+A Note to My Future Self
+
+<br>
+
+#never bow down
+(YOU SERVE ALL DAY)
+
+</h2>
+
+<p>
+
+Keep growing,
+learning and dreaming.
+
+Remember the beautiful moments
+that helped you become who you are,
+
+and enjoy every part
+of your journey.
+
+</p>
+
+</article>
+
+
+<a
+class="home-button"
+href="#home">
+
+← Back Home
+
+</a>
+
+</main>
+
+</section>
+
+
+<!-- GALLERY -->
+
+<section id="gallery">
+
+<section class="gallery-heading">
+
+<h1>My Gallery</h1>
+
+<p>
+
+Little moments worth remembering ✧
+
+</p>
+
+</section>
+
+
+<main class="gallery-container">
+
+
+<section class="add-photo">
+
+<h2>Add a New Memory ✧</h2>
+
+<input
+
+type="file"
+
+id="photo-input"
+
+accept="image/*"
+
+>
+
+
+<input
+
+type="text"
+
+id="photo-caption"
+
+placeholder="Write a caption..."
+
+>
+
+
+<button
+onclick="addPhoto()">
+
+Add to Gallery
+
+</button>
+
+</section>
+
+
+<div
+class="gallery-grid"
+id="gallery-grid">
+
+
+<div class="photo">
+
+<img
+src="images/memory1.jpg"
+alt="A beautiful memory">
+
+<p>
+
+A beautiful day ✧
+
+</p>
+
+</div>
+
+
+<div class="photo">
+
+<img
+src="images/memory2.jpg"
+alt="A special moment">
+
+<p>
+
+A moment to remember
+
+</p>
+
+</div>
+
+
+<div class="photo">
+
+<img
+src="images/memory3.jpg"
+alt="A happy memory">
+
+<p>
+
+Little things that made me smile
+
+</p>
+
+</div>
+
+
+<div class="photo">
+
+<img
+src="images/memory4.jpg"
+alt="A favourite memory">
+
+<p>
+
+One of my favourite memories
+
+</p>
+
+</div>
+
+
+<div class="photo">
+
+<img
+src="images/memory5.jpg"
+alt="A peaceful moment">
+
+<p>
+
+Peaceful moments
+
+</p>
+
+</div>
+
+</div>
+
+</main>
+
+</section>
+
+
+<!-- SONGS -->
+
+<section id="songs">
+
+<div class="songs-heading">
+
+<h1>My Favorite Songs 🎵</h1>
+
+<p>
+
+Songs that make the memories
+feel even more beautiful ✧
+
+</p>
+
+</div>
+
+
+<div class="songs-container">
+
+
+<div class="song">
+
+<iframe
+
+style="border-radius:12px"
+
+src="https://open.spotify.com/embed/track/5KX0YeCNKaOc3XhhDHi3mI?utm_source=generator&si=0dc1eb5c4e4846e7"
+
+height="352"
+
+allowfullscreen=""
+
+allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+
+loading="lazy">
+
+</iframe>
+
+</div>
+
+
+<div class="song">
+
+<iframe
+
+style="border-radius:12px"
+
+src="https://open.spotify.com/embed/track/5Dk8hOtirNtN3SNSIPNfIT?utm_source=generator&si=0049181b1f97414d"
+
+height="352"
+
+allowfullscreen=""
+
+allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+
+loading="lazy">
+
+</iframe>
+
+</div>
+
+
+<div class="song">
+
+<iframe
+
+style="border-radius:12px"
+
+src="https://open.spotify.com/embed/track/3YPtN5X0HxIzeRCHxfoXTy?utm_source=generator&si=f5c0178d3cf54089"
+
+height="352"
+
+allowfullscreen=""
+
+allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+
+loading="lazy">
+
+</iframe>
+
+</div>
+
+
+<div class="song">
+
+<iframe
+
+style="border-radius:12px"
+
+src="https://open.spotify.com/embed/track/0U6EtYtNKv8t3o9cjniLn2?utm_source=generator&si=a8437c3bbc934fae"
+
+height="352"
+
+allowfullscreen=""
+
+allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+
+loading="lazy">
+
+</iframe>
+
+</div>
+
+
+<div class="song">
+
+<iframe
+
+style="border-radius:12px"
+
+src="https://open.spotify.com/embed/track/6rdkCkjk6D12xRpdMXy0I2?utm_source=generator&si=ee7f61799c934eb5"
+
+height="352"
+
+allowfullscreen=""
+
+allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+
+loading="lazy">
+
+</iframe>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+© 2026 hrsofrahma ✧
+
+<br>
+
+Cornelius Diaries
+
+</footer>
+
+
+<script>
+
+
+/* LOAD SAVED PHOTOS */
+
+window.addEventListener(
+"load",
+
+function(){
+
+const savedPhotos =
+
+JSON.parse(
+
+localStorage.getItem(
+
+"myGalleryPhotos"
+
+)
+
+) || [];
+
+
+savedPhotos.forEach(
+
+function(photo,index){
+
+displayPhoto(
+
+photo.image,
+
+photo.caption,
+
+index
+
+);
+
+}
+
+);
+
+}
+
+);
+
+
+/* ADD PHOTO */
+
+function addPhoto(){
+
+const photoInput =
+
+document.getElementById(
+
+"photo-input"
+
+);
+
+
+const caption =
+
+document.getElementById(
+
+"photo-caption"
+
+).value.trim();
+
+
+const file =
+
+photoInput.files[0];
+
+
+if(!file){
+
+alert(
+
+"Please choose a photo."
+
+);
+
+return;
+
+}
+
+
+const reader =
+
+new FileReader();
+
+
+reader.onload =
+
+function(event){
+
+const image =
+
+event.target.result;
+
+
+const photo = {
+
+image:image,
+
+caption:
+
+caption ||
+
+"A beautiful memory ✧"
+
+};
+
+
+const savedPhotos =
+
+JSON.parse(
+
+localStorage.getItem(
+
+"myGalleryPhotos"
+
+)
+
+) || [];
+
+
+savedPhotos.push(
+
+photo
+
+);
+
+
+localStorage.setItem(
+
+"myGalleryPhotos",
+
+JSON.stringify(
+
+savedPhotos
+
+)
+
+);
+
+
+displayPhoto(
+
+photo.image,
+
+photo.caption,
+
+savedPhotos.length - 1
+
+);
+
+
+photoInput.value = "";
+
+
+document.getElementById(
+
+"photo-caption"
+
+).value = "";
+
+};
+
+
+reader.readAsDataURL(
+
+file
+
+);
+
+}
+
+
+/* DISPLAY PHOTO */
+
+function displayPhoto(
+
+image,
+
+caption,
+
+index
+
+){
+
+const photoCard =
+
+document.createElement(
+
+"div"
+
+);
+
+
+photoCard.className =
+
+"photo";
+
+
+const photoImage =
+
+document.createElement(
+
+"img"
+
+);
+
+
+photoImage.src =
+
+image;
+
+
+photoImage.alt =
+
+caption;
+
+
+const photoText =
+
+document.createElement(
+
+"p"
+
+);
+
+
+photoText.textContent =
+
+caption;
+
+
+const deleteButton =
+
+document.createElement(
+
+"button"
+
+);
+
+
+deleteButton.className =
+
+"delete-photo";
+
+
+deleteButton.textContent =
+
+"Delete Photo";
+
+
+deleteButton.onclick =
+
+function(){
+
+deletePhoto(
+
+index
+
+);
+
+};
+
+
+photoCard.appendChild(
+
+photoImage
+
+);
+
+
+photoCard.appendChild(
+
+photoText
+
+);
+
+
+photoCard.appendChild(
+
+deleteButton
+
+);
+
+
+document
+
+.getElementById(
+
+"gallery-grid"
+
+)
+
+.appendChild(
+
+photoCard
+
+);
+
+}
+
+
+/* DELETE PHOTO */
+
+function deletePhoto(
+
+index
+
+){
+
+const answer =
+
+confirm(
+
+"Do you want to delete this photo?"
+
+);
+
+
+if(answer === false){
+
+return;
+
+}
+
+
+const savedPhotos =
+
+JSON.parse(
+
+localStorage.getItem(
+
+"myGalleryPhotos"
+
+)
+
+) || [];
+
+
+savedPhotos.splice(
+
+index,
+
+1
+
+);
+
+
+localStorage.setItem(
+
+"myGalleryPhotos",
+
+JSON.stringify(
+
+savedPhotos
+
+)
+
+);
+
+
+location.reload();
+
+}
+
+
+</script>
+
 </body>
+
 </html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>hrsofrahma | Cornelius Diaries</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Cormorant+Garamond:ital,wght@1,400&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    color:#5b2c3d;
+}
+
+/* MAIN PAGE */
+
+.home{
+    height:100vh;
+    background:
+    linear-gradient(
+    rgba(255,220,230,.55),
+    rgba(255,240,245,.65)
+    ),
+    url("background.jpg.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    position:relative;
+    overflow:hidden;
+}
+
+
+/* TOP NAV */
+
+nav{
+    position:absolute;
+    top:30px;
+    width:100%;
+    text-align:center;
+}
+
+nav a{
+    text-decoration:none;
+    color:#6b3c4e;
+    margin:0 18px;
+    font-size:14px;
+}
+
+nav a:hover{
+    color:#d88ca1;
+}
+
+
+/* DIARY CARD */
+
+.diary{
+    background:
+linear-gradient(
+rgba(255,248,245,.35),
+rgba(255,248,245,.45)
+),
+url("diary-picture.jpg");
+
+background-size:cover;
+background-position:center;
+    padding:70px 90px;
+    border-radius:40px;
+
+    border:3px solid rgba(255,255,255,.8);
+
+    box-shadow:
+    0 20px 50px rgba(100,50,60,.2);
+
+    text-align:center;
+
+    backdrop-filter:blur(8px);
+
+    animation:appear 2s ease;
+}
+
+
+h1{
+    font-family:'Parisienne',cursive;
+    font-size:5rem;
+    color:#380618;
+}
+
+
+h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:2rem;
+    font-style:italic;
+    margin-bottom:20px;
+}
+
+
+p{
+    font-size:16px;
+    color:#380215;
+}
+
+
+/* BUTTON */
+
+button{
+    margin-top:35px;
+
+    padding:15px 35px;
+
+    border:none;
+    border-radius:40px;
+
+    background:#460719;
+    color:white;
+
+    font-size:15px;
+
+    cursor:pointer;
+
+    transition:.4s;
+}
+
+
+button:hover{
+    background:#44061a;
+    transform:translateY(-5px);
+}
+
+
+/* SPARKLES */
+
+.sparkle{
+    position:absolute;
+    color:white;
+    font-size:25px;
+    animation:float 8s infinite;
+}
+
+
+@keyframes float{
+
+0%{
+transform:translateY(100vh);
+opacity:0;
+}
+
+50%{
+opacity:1;
+}
+
+100%{
+transform:translateY(-100vh);
+opacity:0;
+}
+
+}
+
+
+@keyframes appear{
+
+from{
+opacity:0;
+transform:translateY(40px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+
+@media(max-width:700px){
+
+.diary{
+padding:40px;
+}
+
+h1{
+font-size:3.5rem;
+}
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<section class="home">
+
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Diary</a>
+<a href="gallery.html">Gallery</a> 
+<a href="#">About</a>
+<a href="#">Contact</a>
+<a href="songs.html">Songs 🎵</a>
+</nav>
+
+
+
+<div class="diary">
+    <img src="profile.jpg" alt="hrsofrahma" class="profile-picture">
+<h1>hrsofrahma</h1>
+
+<h2>Cornelius Diaries</h2>
+
+<p>
+where the queen writes
+<br>
+beautiful sightings ✧
+</p>
+
+<a href="diary.html">
+<button>Open My Diary</button>
+</a>
+
+</div>
+
+
+
+<div class="sparkle" style="left:15%;animation-delay:1s;">✦</div>
+<div class="sparkle" style="left:35%;animation-delay:3s;">✧</div>
+<div class="sparkle" style="left:60%;animation-delay:5s;">✦</div>
+<div class="sparkle" style="left:80%;animation-delay:2s;">✧</div>
+
+
+</section>
+
+
+</body>
+</html>
