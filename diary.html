@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title> hrsofrahma | Cornelius Diaries</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Cormorant+Garamond:ital,wght@1,400&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+    font-family:'Poppins',sans-serif;
+
+    background:#3f0d1e;
+
+    color:#240410;
+}
+
+
+/* NAVIGATION */
+
+nav{
+    background:#331306;
+
+    padding:25px;
+
+    text-align:center;
+
+    box-shadow:
+    0 5px 20px rgba(100,50,60,.12);
+}
+
+
+nav a{
+    text-decoration:none;
+
+    color:#6b3c4e;
+
+    margin:0 18px;
+
+    font-size:14px;
+}
+
+
+nav a:hover{
+    color:#700725;
+}
+
+
+/* DIARY TITLE */
+
+.diary-title{
+
+    text-align:center;
+
+    padding:70px 20px;
+
+    background:
+    linear-gradient(
+    rgba(117, 10, 39, 0.65),
+    rgba(182, 19, 71, 0.75)
+    ),
+    url("background.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+}
+
+
+.diary-title h1{
+
+    font-family:'Parisienne',cursive;
+
+    font-size:5rem;
+
+    color:rgb(53, 11, 11);
+
+    text-shadow:
+    0 4px 15px rgba(90,40,60,.4);
+}
+
+
+.diary-title p{
+
+    font-family:
+    'Cormorant Garamond',serif;
+
+    font-size:1.5rem;
+
+    font-style:italic;
+
+    color:rgb(58, 8, 8);
+}
+
+
+/* DIARY ENTRIES */
+
+.diary-container{
+
+    width:85%;
+
+    max-width:850px;
+
+    margin:auto;
+
+    padding:60px 0;
+}
+
+
+.entry{
+
+    background:rgb(44, 7, 7);
+
+    padding:40px;
+
+    margin-bottom:35px;
+
+    border-radius:25px;
+
+    border-left:
+    7px solid #25040e;
+
+    box-shadow:
+    0 12px 35px
+    rgba(120,60,80,.15);
+
+    transition:.4s;
+}
+
+
+.entry:hover{
+
+    transform:
+    translateY(-6px);
+}
+
+
+.date{
+
+    color:#420d1e;
+
+    font-size:13px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+}
+
+
+.entry h2{
+
+    font-family:
+    'Cormorant Garamond',serif;
+
+    font-size:2.2rem;
+
+    font-style:italic;
+
+    color:#8c4961;
+
+    margin:12px 0;
+}
+
+
+.entry p{
+
+    color:#74515d;
+
+    line-height:1.9;
+}
+
+
+/* HOME BUTTON */
+
+.home-button{
+
+    display:inline-block;
+
+    padding:14px 30px;
+
+    background:#410717;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:40px;
+
+    margin-bottom:50px;
+
+    transition:.3s;
+}
+
+
+.home-button:hover{
+
+    background:#63112c;
+
+    transform:
+    translateY(-4px);
+}
+
+
+/* FOOTER */
+
+footer{
+
+    text-align:center;
+
+    padding:35px;
+
+    color:#290b15;
+}
+
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    .diary-title h1{
+
+        font-size:3.8rem;
+    }
+
+
+    .entry{
+
+        padding:25px;
+    }
+
+
+    nav a{
+
+        margin:0 7px;
+    }
+
+}
+
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="diary.html">Diary</a>
+
+<a href="gallery.html">Gallery</a>
+
+<a href="#">About</a>
+
+<a href="#">Contact</a>
+
+</nav>
+
+<section class="diary-title">
+
+<h1>My Diary</h1>
+
+<p>
+
+A collection of thoughts,
+memories and beautiful moments ✧
+
+</p>
+
+</section>
+
+<main class="diary-container">
+
+<article class="entry">
+
+<div class="date">
+
+July 29, 2026
+
+</div>
+
+<h2>
+
+A Beautiful Beginning
+(lessons on why I am THE QUEEN)
+
+</h2>
+
+<p>
+
+any day you wake up and realize i consider you my pawn,
+ you should die of happiness (no joking intent)
+
+</p>
+
+</article>
+
+<article class="entry">
+
+<div class="date">
+
+July 20, 2026
+
+</div>
+
+<h2>
+
+Little Things That Made Me Smile
+(My ravaging and astonishing self)
+
+</h2>
+
+<p>
+
+Sometimes i look at myself in the mirror and im so happy, 
+like chimo look at this ravaging beauty
+
+
+</p>
+
+</article>
+
+<article class="entry">
+
+<div class="date">
+
+July 30, 2026
+
+</div>
+
+<h2>
+
+A Note to My Future Self
+#never bow down (YOU SERVE ALL DAY )
+</h2>
+
+<p>
+
+Keep growing, learning and dreaming.
+Remember the beautiful moments
+that helped you become who you are,
+and enjoy every part of your journey.
+
+</p>
+
+</article>
+
+<a class="home-button"
+href="index.html">
+
+← Back Home
+
+</a>
+
+</main>
+
+<footer>
+
+© 2026 hrsofrahma ✧
+Cornelius Diaries
+
+</footer>
+
+</body>
+
+</html>
